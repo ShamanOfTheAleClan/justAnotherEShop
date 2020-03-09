@@ -1,0 +1,24 @@
+.flex {
+   display: flex;
+   width: 100%;
+}
+
+.spaceBetween {
+   justify-content: space-between;
+}
+
+.justifyCenter {
+   justify-content: center;
+}
+
+.alignCenter {
+   align-items: center;
+}
+
+.alignFlexStart {
+   align-items: flex-start;
+}
+
+.alignFlexEnd {
+   align-items: flex-end;
+}
