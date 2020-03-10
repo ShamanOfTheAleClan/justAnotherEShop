@@ -1,0 +1,66 @@
+.product {
+   /* flex: 0.24; */
+   width: 24%;
+   box-shadow: 1px 1px 5px 2px #888;
+   /* padding-bottom: 1rem; */
+   border-radius: 5px;
+}
+
+.product:last-child {
+   margin-left: 1.3%;
+   margin-right: auto;
+}
+
+.product:nth-child(4) ~ .product {
+   margin-top: 1.3%;
+}
+
+.image {
+   object-fit: contain;
+   width: 100%;
+}
+
+.name {
+   margin: 0.6rem 0;
+   font-size: 1.2rem;
+   font-weight: 600;
+}
+
+.description {
+   margin-bottom: 0.6rem;
+}
+
+.price,
+.quantity {
+   font-weight: bold;
+}
+
+.buttons {
+   margin-top: 1rem;
+}
+
+.button ~ .button {
+   margin-left: 1rem;
+}
+
+.container {
+   padding: 1rem;
+}
+
+.button {
+   padding: 0.5em;
+   cursor: pointer;
+   background-color: #cf2317;
+   border-radius: 10px;
+   border-bottom: 5px solid #2a313c;
+   border-right: 0px solid #2a313c;
+   border-left: 0px solid #2a313c;
+   border-top: 0px solid #2a313c;
+   outline: none;
+   margin-top: auto;
+   color: #fff;
+}
+.button:active {
+   border-bottom: 0px solid #2a313c;
+   margin-top: 5px;
+}

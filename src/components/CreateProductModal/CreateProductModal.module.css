@@ -1,12 +1,35 @@
-.products {
+.form {
    display: flex;
-   flex-wrap: wrap;
+   flex-direction: column;
+   align-items: center;
    width: 100%;
-   justify-content: space-between;
 }
 
-.buttonWrapper {
-   margin: 0.5rem 0;
+.label {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   align-items: center;
+   font-weight: bold;
+}
+
+.label ~ .label {
+   margin-top: 1rem;
+}
+
+.input,
+.textarea {
+   max-width: 50%;
+   width: 500px;
+   margin-top: 0.5rem;
+}
+
+.textarea {
+   height: 5em;
+}
+
+.buttons {
+   margin: 1rem;
 }
 
 .button {
@@ -25,4 +48,8 @@
 .button:active {
    border-bottom: 0px solid #2a313c;
    margin-top: 5px;
+}
+
+.button ~ .button {
+   margin-left: 1rem;
 }

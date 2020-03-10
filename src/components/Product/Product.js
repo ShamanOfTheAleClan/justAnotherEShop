@@ -1,17 +1,28 @@
 import React from "react";
+import c from "./Product.module.css";
 
 export const Product = ({ product }) => {
-  return (
-    <div className="product">
-      <img src={product.image} alt={product.name} className="image" />
-      <h2 className="name">{product.name}</h2>
-      <p className="description">{product.description}</p>
-      <div className="price">{product.price}</div>
-      <div className="quantity">{product.quantity}</div>
-      <div className="buttons">
-        <button>Add to cart</button>
-        <button>Preview</button>
+   const { image, name, description, price, quantity } = product;
+
+   const shortDescription =
+      (description || "")
+         .split(" ")
+         .splice(0, 20)
+         .join(" ") + " ... ";
+
+   return (
+      <div className={c.product}>
+         <img src={image} alt={name} className={c.image} />
+         <div className={c.container}>
+            <h2 className={c.name}>{name}</h2>
+            <p className={c.description}>{shortDescription}</p>
+            <div className={c.price}>Price: {price} €</div>
+            <div className={c.quantity}>Quantity: {quantity}</div>
+            <div className={c.buttons}>
+               <button className={c.button}>Add to cart</button>
+               <button className={c.button}>Preview</button>
+            </div>
+         </div>
       </div>
-    </div>
-  );
+   );
 };
